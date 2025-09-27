@@ -171,7 +171,7 @@ if __name__ == "__main__":
 
     # Generate reStructuredText report
     rst_report = generate_rst_report(dashboard_data)
-    with open("report.rst", "w") as f:
+    with open("docs/report.rst", "w") as f:
         f.write(rst_report)
 
     print("Dashboard data structure created successfully")
