@@ -1,4 +1,3 @@
-# First, let me analyze the attached images to understand the dashboard requirements
 import json
 
 # Based on the images I can see, I'll extract the data structure and metrics
@@ -110,5 +109,71 @@ dashboard_data = {
     }
 }
 
-print("Dashboard data structure created successfully")
-print(f"Total sections: {len(dashboard_data)}")
+def generate_md_report(data):
+    """Generates a Markdown report from the dashboard data."""
+    report = "# Development Quality Dashboard Report\n\n"
+
+    for section, values in data.items():
+        report += f"## {section.replace('_', ' ').title()}\n\n"
+        if isinstance(values, dict):
+            for key, value in values.items():
+                report += f"### {key.replace('_', ' ').title()}\n"
+                if isinstance(value, dict):
+                    for sub_key, sub_value in value.items():
+                        report += f"- **{sub_key.replace('_', ' ').title()}:** {sub_value}\n"
+                elif isinstance(value, list):
+                    for item in value:
+                        if isinstance(item, dict):
+                            report += "- " + ", ".join([f"{k.replace('_', ' ').title()}: {v}" for k, v in item.items()]) + "\n"
+                        else:
+                            report += f"- {item}\n"
+                else:
+                    report += f"- {value}\n"
+                report += "\n"
+        report += "\n"
+
+    return report
+
+def generate_rst_report(data):
+    """Generates a reStructuredText report from the dashboard data."""
+    report = "================================\n"
+    report += "Development Quality Dashboard Report\n"
+    report += "================================\n\n"
+
+    for section, values in data.items():
+        report += f"{section.replace('_', ' ').title()}\n"
+        report += "-" * len(section) + "\n\n"
+        if isinstance(values, dict):
+            for key, value in values.items():
+                report += f"{key.replace('_', ' ').title()}\n"
+                report += "~" * len(key) + "\n"
+                if isinstance(value, dict):
+                    for sub_key, sub_value in value.items():
+                        report += f"- **{sub_key.replace('_', ' ').title()}:** {sub_value}\n"
+                elif isinstance(value, list):
+                    for item in value:
+                        if isinstance(item, dict):
+                            report += "- " + ", ".join([f"{k.replace('_', ' ').title()}: {v}" for k, v in item.items()]) + "\n"
+                        else:
+                            report += f"- {item}\n"
+                else:
+                    report += f"- {value}\n"
+                report += "\n"
+        report += "\n"
+
+    return report
+
+if __name__ == "__main__":
+    # Generate Markdown report
+    md_report = generate_md_report(dashboard_data)
+    with open("report.md", "w") as f:
+        f.write(md_report)
+
+    # Generate reStructuredText report
+    rst_report = generate_rst_report(dashboard_data)
+    with open("report.rst", "w") as f:
+        f.write(rst_report)
+
+    print("Dashboard data structure created successfully")
+    print(f"Total sections: {len(dashboard_data)}")
+    print("Successfully generated report.md and report.rst")
