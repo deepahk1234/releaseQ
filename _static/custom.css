@@ -1,1 +1,142 @@
-/* This file intentionally left blank. */
+/* General Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.section h1, .section h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Grid for Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #005f73;
+}
+
+.card-content {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.card-target {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.card-status-pass {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+.card-status-fail {
+    color: #e76f51;
+    font-weight: bold;
+}
+
+
+/* Progress Bar Styling */
+.progress-bar-container {
+    margin-bottom: 15px;
+}
+
+.progress-bar-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #2a9d8f;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+/* Simple Bar Chart Styling */
+.bar-chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+    background: #fdfdfd;
+    border-radius: 4px;
+}
+
+.bar-chart-bar {
+    width: 40px;
+    background-color: #0077b6;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+}
+
+.bar-chart-bar .label {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.bar-chart-bar .value {
+    padding-top: 5px;
+}
+
+/* List styling */
+.styled-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.styled-list li {
+    background: #fff;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-left: 4px solid #0077b6;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}

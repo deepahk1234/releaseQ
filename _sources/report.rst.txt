@@ -2,165 +2,138 @@
 Development Quality Dashboard Report
 ====================================
 
-Performance Metrics
--------------------
+Key Performance Metrics
+-----------------------
 
-============= ========= ====== ======
-Metric        Current   Target Status
-============= ========= ====== ======
-Response Time 245ms     300    pass  
-Throughput    1200req/s 1000   pass  
-Error Rate    0.02%     0.1    pass  
-Memory Usage  78%       80     pass  
-============= ========= ====== ======
+.. raw:: html
 
-Technical Debt
---------------
-
-Breakdown
-~~~~~~~~~
-
-=============== =============
-Priority        Value (hours)
-=============== =============
-High Priority   2.1          
-Medium Priority 4.2          
-Low Priority    6.8          
-Total Debt      13.1         
-=============== =============
-
-Hotspots
-~~~~~~~~
-
-===================== ======================== ==============
-Name                  Type                     Effort (hours)
-===================== ======================== ==============
-Authentication Module Refactoring needed       2.5           
-Data Processing       Performance optimization 1.8           
-API Gateway           Code duplication         1.2           
-===================== ======================== ==============
-
-Code Quality
-------------
-
-Trends
-~~~~~~
-
-======= =================
-Version Quality Score (%)
-======= =================
-v2.6    80               
-v2.5    75               
-v2.4    72               
-v2.3    68               
-v2.2    65               
-v2.1    58               
-======= =================
-
-* **Improvement:** 22%
-* **Cognitive Complexity:** 1204 (Previous: 1189, Change: 15)
-
-Security Compliance
--------------------
-
-Standards Compliance
-~~~~~~~~~~~~~~~~~~~~
-
-=============== =================
-Standard        Status           
-=============== =================
-Owasp Top10     Compliant        
-Cwe Top25       Addressed        
-Nist Guidelines Following        
-Soc2            In progress (85%)
-=============== =================
-
-Vulnerability Summary
-~~~~~~~~~~~~~~~~~~~~~
-
-======== =====
-Severity Count
-======== =====
-Critical 0    
-High     1    
-Medium   6    
-Low      29   
-======== =====
-
-Testing & QA
-------------
+   <div class="card-grid">
+      
+          <div class="card">
+              <div class="card-title">Response Time</div>
+              <div class="card-content">245ms</div>
+              <div class="card-target">Target: <300ms <span class="card-status-pass">●</span></div>
+          </div>
+                
+          <div class="card">
+              <div class="card-title">Throughput</div>
+              <div class="card-content">1200req/s</div>
+              <div class="card-target">Target: >1000 <span class="card-status-pass">●</span></div>
+          </div>
+                
+          <div class="card">
+              <div class="card-title">Error Rate</div>
+              <div class="card-content">0.02%</div>
+              <div class="card-target">Target: <0.1% <span class="card-status-fail">●</span></div>
+          </div>
+                
+          <div class="card">
+              <div class="card-title">Memory Usage</div>
+              <div class="card-content">78%</div>
+              <div class="card-target">Target: <80% <span class="card-status-pass">●</span></div>
+          </div>
+             </div>
 
 Test Coverage
-~~~~~~~~~~~~~
+-------------
 
-=========== ============
-Area        Coverage (%)
-=========== ============
-Unit Tests  82          
-Integration 74          
-E2E Tests   65          
-Api Tests   91          
-=========== ============
+.. raw:: html
 
-Quality Gates
-~~~~~~~~~~~~~
+   <div class="card">
+      <div class="card-title">Overall Test Coverage</div>
+      
+          <div class="progress-bar-container">
+              <div class="progress-bar-label">
+                  <span>Unit Tests</span>
+                  <span>82%</span>
+              </div>
+              <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 82.0%;"></div>
+              </div>
+          </div>
+                
+          <div class="progress-bar-container">
+              <div class="progress-bar-label">
+                  <span>Integration</span>
+                  <span>74%</span>
+              </div>
+              <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 74.0%;"></div>
+              </div>
+          </div>
+                
+          <div class="progress-bar-container">
+              <div class="progress-bar-label">
+                  <span>E2E Tests</span>
+                  <span>65%</span>
+              </div>
+              <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 65.0%;"></div>
+              </div>
+          </div>
+                
+          <div class="progress-bar-container">
+              <div class="progress-bar-label">
+                  <span>API Tests</span>
+                  <span>91%</span>
+              </div>
+              <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 91.0%;"></div>
+              </div>
+          </div>
+             </div>
 
-============= =======================
-Gate          Status                 
-============= =======================
-Build         Passing (All platforms)
-Unit Tests    1,247 tests passed     
-Code Coverage Above threshold (80%+) 
-Security Scan No critical issues     
-Performance   1 regression identified
-Dependencies  Up to date             
-============= =======================
+Code Quality Trends
+-------------------
 
-SonarQube Metrics
------------------
+.. raw:: html
 
-==================== ======= ======== ======
-Metric               Current Previous Change
-==================== ======= ======== ======
-Bugs                 3       7        -4    
-Vulnerabilities      1       2        -1    
-Code Smells          47      52       -5    
-Duplicated Lines     2.1     2.8      -0.7  
-Cognitive Complexity 1204    1189     15    
-==================== ======= ======== ======
-
-Audit Trail
------------
-
-Recent Audits
-~~~~~~~~~~~~~
-
-================ ========== ==============
-Type             Date       Status        
-================ ========== ==============
-Security Audit   2024-09-15 Passed        
-Code Review      2024-09-20 Approved      
-Penetration Test 2024-09-10 Minor findings
-Compliance Check 2024-09-18 Compliant     
-================ ========== ==============
+   <div class="card">
+      <div class="card-title">Quality Score Over Versions</div>
+      <div class="bar-chart-container">
+              <div class="bar-chart-bar" style="height: 72.5%;">
+                  <div class="value">58</div>
+                  <div class="label">v2.1</div>
+              </div>
+              
+              <div class="bar-chart-bar" style="height: 81.25%;">
+                  <div class="value">65</div>
+                  <div class="label">v2.2</div>
+              </div>
+              
+              <div class="bar-chart-bar" style="height: 85.0%;">
+                  <div class="value">68</div>
+                  <div class="label">v2.3</div>
+              </div>
+              
+              <div class="bar-chart-bar" style="height: 90.0%;">
+                  <div class="value">72</div>
+                  <div class="label">v2.4</div>
+              </div>
+              
+              <div class="bar-chart-bar" style="height: 93.75%;">
+                  <div class="value">75</div>
+                  <div class="label">v2.5</div>
+              </div>
+              
+              <div class="bar-chart-bar" style="height: 100.0%;">
+                  <div class="value">80</div>
+                  <div class="label">v2.6</div>
+              </div>
+              </div>   </div>
 
 Action Items
-~~~~~~~~~~~~
+------------
 
-* Address medium priority security findings by 2024-10-01
-* Increase E2E test coverage to 75% by 2024-10-15
-* Complete SOC 2 compliance documentation
-* Resolve performance regression in data processing
+.. raw:: html
 
-Improvement Goals
------------------
-
-============== ======= ========= ============= ==========
-Metric         Current Target    Owner         Due Date  
-============== ======= ========= ============= ==========
-Code Coverage  85      90        QA Team       2024-10-30
-Security Score 98      100       Security Team 2024-10-15
-Technical Debt 13.1h   <10h      Dev Team      2024-11-15
-Performance    Good    Excellent Platform Team 2024-10-30
-============== ======= ========= ============= ==========
+   <div class="card">
+      <div class="card-title">Pending Action Items</div>
+      <ul class="styled-list">
+         <li>Address medium priority security findings by 2024-10-01</li>
+         <li>Increase E2E test coverage to 75% by 2024-10-15</li>
+         <li>Complete SOC 2 compliance documentation</li>
+         <li>Resolve performance regression in data processing</li>
+      </ul>
+   </div>
 
