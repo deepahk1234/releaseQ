@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Development Quality Dashboard Report &#8212; Dev Quality Dashboard  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a985ea4a" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Dev Quality Dashboard" href="index.html" />
+
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+
+
+
+
+  </head><body>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+
+
+          <div class="body" role="main">
+
+  <section id="development-quality-dashboard-report">
+<h1>Development Quality Dashboard Report<a class="headerlink" href="#development-quality-dashboard-report" title="Link to this heading">¶</a></h1>
+<section id="key-performance-metrics">
+<h2>Key Performance Metrics<a class="headerlink" href="#key-performance-metrics" title="Link to this heading">¶</a></h2>
+<div class="card-grid">
+
+       <div class="card">
+           <div class="card-title">Response Time</div>
+           <div class="card-content">245ms</div>
+           <div class="card-target">Target: <300ms <span class="card-status-pass">●</span></div>
+       </div>
+
+       <div class="card">
+           <div class="card-title">Throughput</div>
+           <div class="card-content">1200req/s</div>
+           <div class="card-target">Target: >1000 <span class="card-status-pass">●</span></div>
+       </div>
+
+       <div class="card">
+           <div class="card-title">Error Rate</div>
+           <div class="card-content">0.02%</div>
+           <div class="card-target">Target: <0.1% <span class="card-status-fail">●</span></div>
+       </div>
+
+       <div class="card">
+           <div class="card-title">Memory Usage</div>
+           <div class="card-content">78%</div>
+           <div class="card-target">Target: <80% <span class="card-status-pass">●</span></div>
+       </div>
+          </div></section>
+<section id="test-coverage">
+<h2>Test Coverage<a class="headerlink" href="#test-coverage" title="Link to this heading">¶</a></h2>
+<div class="card">
+   <div class="card-title">Overall Test Coverage</div>
+
+       <div class="progress-bar-container">
+           <div class="progress-bar-label">
+               <span>Unit Tests</span>
+               <span>82%</span>
+           </div>
+           <div class="progress-bar-bg">
+               <div class="progress-bar-fill" style="width: 82.0%;"></div>
+           </div>
+       </div>
+
+       <div class="progress-bar-container">
+           <div class="progress-bar-label">
+               <span>Integration</span>
+               <span>74%</span>
+           </div>
+           <div class="progress-bar-bg">
+               <div class="progress-bar-fill" style="width: 74.0%;"></div>
+           </div>
+       </div>
+
+       <div class="progress-bar-container">
+           <div class="progress-bar-label">
+               <span>E2E Tests</span>
+               <span>65%</span>
+           </div>
+           <div class="progress-bar-bg">
+               <div class="progress-bar-fill" style="width: 65.0%;"></div>
+           </div>
+       </div>
+
+       <div class="progress-bar-container">
+           <div class="progress-bar-label">
+               <span>API Tests</span>
+               <span>91%</span>
+           </div>
+           <div class="progress-bar-bg">
+               <div class="progress-bar-fill" style="width: 91.0%;"></div>
+           </div>
+       </div>
+          </div></section>
+<section id="code-quality-trends">
+<h2>Code Quality Trends<a class="headerlink" href="#code-quality-trends" title="Link to this heading">¶</a></h2>
+<div class="card">
+   <div class="card-title">Quality Score Over Versions</div>
+   <div class="bar-chart-container">
+           <div class="bar-chart-bar" style="height: 72.5%;">
+               <div class="value">58</div>
+               <div class="label">v2.1</div>
+           </div>
+
+           <div class="bar-chart-bar" style="height: 81.25%;">
+               <div class="value">65</div>
+               <div class="label">v2.2</div>
+           </div>
+
+           <div class="bar-chart-bar" style="height: 85.0%;">
+               <div class="value">68</div>
+               <div class="label">v2.3</div>
+           </div>
+
+           <div class="bar-chart-bar" style="height: 90.0%;">
+               <div class="value">72</div>
+               <div class="label">v2.4</div>
+           </div>
+
+           <div class="bar-chart-bar" style="height: 93.75%;">
+               <div class="value">75</div>
+               <div class="label">v2.5</div>
+           </div>
+
+           <div class="bar-chart-bar" style="height: 100.0%;">
+               <div class="value">80</div>
+               <div class="label">v2.6</div>
+           </div>
+           </div>   </div></section>
+<section id="action-items">
+<h2>Action Items<a class="headerlink" href="#action-items" title="Link to this heading">¶</a></h2>
+<div class="card">
+   <div class="card-title">Pending Action Items</div>
+   <ul class="styled-list">
+      <li>Address medium priority security findings by 2024-10-01</li>
+      <li>Increase E2E test coverage to 75% by 2024-10-15</li>
+      <li>Complete SOC 2 compliance documentation</li>
+      <li>Resolve performance regression in data processing</li>
+   </ul>
+</div></section>
+</section>
+
+
+          </div>
+
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Dev Quality Dashboard</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development Quality Dashboard Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#key-performance-metrics">Key Performance Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-coverage">Test Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-quality-trends">Code Quality Trends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action-items">Action Items</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Dev Quality Dashboard</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Jules.
+
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+
+      |
+      <a href="_sources/report.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+
+
+
+  </body>
+</html>
